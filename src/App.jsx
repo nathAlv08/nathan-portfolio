@@ -4,7 +4,7 @@ import {
   Mail, Phone, MapPin, Music, Play, X, Download, Terminal, Cpu, Eye, 
   Pause, SkipForward, Shield, MessageSquare, Bot, 
   Minimize2, AlertTriangle, Lock, Unlock, Brain, Layers, ExternalLink,
-  Video, FileJson, Database, Instagram, Linkedin, Menu, Star, Zap
+  Video, FileJson, Database, Instagram, Linkedin, Menu
 } from 'lucide-react';
 
 // ==========================================

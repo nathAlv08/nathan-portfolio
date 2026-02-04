@@ -4,7 +4,7 @@ import {
   Mail, Phone, MapPin, Music, Play, X, Download, Terminal, Cpu, Eye, 
   Pause, SkipForward, Shield, MessageSquare, Bot, 
   Minimize2, AlertTriangle, Lock, Unlock, Brain, Layers, ExternalLink,
-  Video, FileJson, Database, Instagram, Linkedin, Menu
+  Video, FileJson, Database, Instagram, Linkedin, Menu, Star, Zap
 } from 'lucide-react';
 
 // ==========================================
@@ -109,12 +109,13 @@ const skillsData = [
   { name: "Data Science", level: 80, icon: "📊" },
 ];
 
+// --- PORTFOLIO DATA (FULL 16 PROJECTS WITH REAL PLACEHOLDER IMAGES) ---
 const portfolioData = [
   {
     id: 1,
     title: "Jamuku Web MVC",
     category: "Web App",
-    image: "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80", 
+    image: "https://images.unsplash.com/photo-1515549832467-8783363e19b6?w=600&q=80", 
     desc: "Aplikasi Mockup UMKM Jamuku yang digunakan konsumen untuk melakukan pemesanan, pembayaran, sekaligus melihat komposisi bahan jamu yang disediakan.",
     tech: ["PHP Native", "MVC Pattern", "MySQL", "Bootstrap 5"],
     github: "https://github.com/nathAlv08/jamukuWebMVC",
@@ -124,7 +125,7 @@ const portfolioData = [
     id: 2,
     title: "UTPAS Social",
     category: "Web App (Group)",
-    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&q=80", 
+    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80", 
     desc: "Aplikasi bagi warga kampus UTPAS baik dosen, mahasiswa untuk saling terhubung satu sama lain seperti media sosial dengan fitur pendukung akademik seperti daftar dan reminder tugas sampai pencarian grup.",
     tech: ["PHP", "Social Network", "Academic"],
     github: "https://github.com/KelompokMVCAdamPlorenNathanYesa/utpas-social",
@@ -155,7 +156,7 @@ const portfolioData = [
     id: 5,
     title: "CICIDS2017 Intrusion Detection",
     category: "AI / Cybersec",
-    image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&q=80",
     desc: "End-to-end machine learning pipeline untuk mendeteksi intrusi jaringan menggunakan dataset CICIDS2017. Mencakup eksplorasi data, pelatihan model (Random Forest & XGBoost), SHAP explainability, dan integrasi IBM Granite GenAI.",
     tech: ["Python", "XGBoost", "SHAP", "IBM Granite", "Jupyter"],
     github: "https://github.com/nathAlv08/cyberids-capstone",
@@ -175,7 +176,7 @@ const portfolioData = [
     id: 7,
     title: "App Mobile Validasi Login",
     category: "Mobile App",
-    image: "https://images.unsplash.com/photo-1616077168712-fc6c788df4ee?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1481487484168-9b930d5b7d9d?w=600&q=80",
     desc: "Aplikasi Mobile yang menerapakan fitur validasi login sebagai penyelesaian tugas Pelatihan VSGA Kominfo 2024.",
     tech: ["Android", "Java", "Auth Logic"],
     github: "https://github.com/nathAlv08/AplikasiValidasiLogin",
@@ -345,7 +346,7 @@ const SectionTitle = ({ icon: Icon, title, subtitle }) => (
     <div className="absolute -left-4 -top-4 w-12 h-12 bg-cyan-500/10 rounded-full blur-xl"></div>
     <div className="flex items-center gap-3 mb-2 relative z-10">
       <div className="p-2 bg-slate-800 rounded-lg text-cyan-400 border border-slate-700 shadow-lg shadow-cyan-500/10"><Icon size={24} /></div>
-      <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight font-mono"><span className="text-cyan-500 mr-2">./</span>{title}</h2>
+      <h2 className="text-2xl md:text-4xl font-bold text-white tracking-tight font-mono break-words"><span className="text-cyan-500 mr-2">./</span>{title}</h2>
     </div>
     {subtitle && <p className="mt-2 text-slate-400 ml-12">{subtitle}</p>}
   </div>
@@ -759,7 +760,7 @@ export default function Portfolio() {
              </h1>
              <p className={`text-xl mb-8 font-mono border-l-4 pl-4 ${hackerMode ? 'text-green-600 border-green-600' : 'text-slate-400 border-purple-500'}`}>{typedTagline}</p>
              
-             {/* QUICK STATS ROW (KEMBALI) */}
+             {/* QUICK STATS ROW */}
              <div className="flex justify-center md:justify-start gap-6 mb-8 text-sm font-mono border-t border-b border-white/5 py-4">
                 <div>
                    <span className="block text-2xl font-bold text-white">{profileData.stats.projects}</span>

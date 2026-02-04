@@ -109,7 +109,6 @@ const skillsData = [
   { name: "Data Science", level: 80, icon: "📊" },
 ];
 
-// --- PORTFOLIO DATA (FULL 16 PROJECTS WITH REAL PLACEHOLDER IMAGES) ---
 const portfolioData = [
   {
     id: 1,
@@ -176,7 +175,7 @@ const portfolioData = [
     id: 7,
     title: "App Mobile Validasi Login",
     category: "Mobile App",
-    image: "https://images.unsplash.com/photo-1618044619888-009e412ff12a?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "https://images.unsplash.com/photo-1616077168712-fc6c788df4ee?w=600&q=80",
     desc: "Aplikasi Mobile yang menerapakan fitur validasi login sebagai penyelesaian tugas Pelatihan VSGA Kominfo 2024.",
     tech: ["Android", "Java", "Auth Logic"],
     github: "https://github.com/nathAlv08/AplikasiValidasiLogin",
@@ -186,7 +185,7 @@ const portfolioData = [
     id: 8,
     title: "Simple Calculator",
     category: "Mobile App",
-    image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1587145820266-a2651c463853?w=600&q=80",
     desc: "Kalkulator Basic Sederhana sebagai tugas penerapan fitur operasional dalam Pelatihan VSGA Kominfo 2024.",
     tech: ["Android", "Java", "Logic"],
     github: "https://github.com/nathAlv08/Simple-Mobile-Java-Calculator-Android-Studio",
@@ -206,7 +205,7 @@ const portfolioData = [
     id: 10,
     title: "Data Pemilih KPU (MockUp)",
     category: "Mobile App",
-    image: "https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "https://images.unsplash.com/photo-1540910419868-4749459ca6c8?w=600&q=80",
     desc: "Aplikasi pengumpulan data pemilih dengan fitur ambil foto dan buka map (GPS) untuk alamat. Data ditampilkan dalam list view.",
     tech: ["Android", "Camera API", "Maps API"],
     github: "https://github.com/nathAlv08/AplDataPemilihKPU",
@@ -240,7 +239,7 @@ const portfolioData = [
     id: 13,
     title: "Student Task Hub",
     category: "Mobile App",
-    image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "https://images.unsplash.com/photo-1517430816045-df4b7de8db2b?w=600&q=80",
     desc: "Aplikasi Task Monitoring dengan UI dan fitur yang lebih basic terbatas pada CRUD data tugas meliputi document attached dan prioritas.",
     tech: ["Android", "CRUD"],
     github: "https://github.com/nathAlv08/logregapp",
@@ -538,6 +537,7 @@ const CertificateModal = ({ item, onClose }) => (
   </div>
 );
 
+// --- PROJECT DETAIL MODAL (REAL LINKS ONLY) ---
 const ProjectDetailModal = ({ project, onClose }) => {
   return (
     <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/90 backdrop-blur-sm p-4 animate-in fade-in zoom-in duration-300">
@@ -546,6 +546,7 @@ const ProjectDetailModal = ({ project, onClose }) => {
         
         {/* Image Side */}
         <div className="md:w-1/2 h-64 md:h-auto bg-slate-900 relative group">
+          {/* FOTO PROJECT: Gunakan Unsplash jika file lokal tidak ada */}
           <img 
             src={project.image} 
             onError={(e)=>{e.target.onerror=null;e.target.src=`https://via.placeholder.com/800x600/1e293b/06b6d4?text=${project.title.replace(/ /g,'+')}`}} 
@@ -734,6 +735,13 @@ export default function Portfolio() {
                     <button key={item} onClick={() => scrollToSection(item.toLowerCase())} className="text-left py-2 text-slate-300 hover:text-cyan-400 border-b border-slate-800">{item}</button>
                 ))}
                  <button onClick={() => setTerminalOpen(true)} className="flex items-center gap-2 text-left py-2 text-slate-300 hover:text-cyan-400"><Terminal size={14}/> Open CLI</button>
+                 
+                 {/* Mobile Social Buttons */}
+                 <div className="flex gap-4 pt-2">
+                    <button onClick={() => window.open(profileData.social.github, '_blank')} className="text-slate-300 hover:text-cyan-400"><Github size={20}/></button>
+                    <button onClick={() => window.open(profileData.social.linkedin, '_blank')} className="text-slate-300 hover:text-cyan-400"><Linkedin size={20}/></button>
+                    <button onClick={() => window.open(profileData.social.instagram, '_blank')} className="text-slate-300 hover:text-cyan-400"><Instagram size={20}/></button>
+                 </div>
             </div>
         )}
       </nav>
@@ -849,7 +857,7 @@ export default function Portfolio() {
             <div className="grid md:grid-cols-2 gap-12">
               <div>
                 <SectionTitle icon={Briefcase} title="Career_Log" />
-                <div className={`space-y-8 border-l-2 ml-3 pl-8 relative ${hackerMode ? 'border-green-800' : 'border-slate-800'}`}>
+                <div className={`space-y-8 border-l-2 ml-6 md:ml-3 pl-8 relative ${hackerMode ? 'border-green-800' : 'border-slate-800'}`}>
                   {experienceData.map((exp, idx) => (
                     <div key={idx} className="relative group">
                       <div className={`absolute -left-[41px] top-0 w-5 h-5 rounded-full border-4 transition ${hackerMode ? 'bg-black border-green-500' : 'bg-slate-950 border-purple-500'}`}></div>
@@ -867,7 +875,7 @@ export default function Portfolio() {
               </div>
               <div>
                 <SectionTitle icon={GraduationCap} title="Education_History" />
-                <div className={`space-y-8 border-l-2 ml-3 pl-8 relative ${hackerMode ? 'border-green-800' : 'border-slate-800'}`}>
+                <div className={`space-y-8 border-l-2 ml-6 md:ml-3 pl-8 relative ${hackerMode ? 'border-green-800' : 'border-slate-800'}`}>
                   {educationData.map((edu, idx) => (
                     <div key={idx} className="relative group">
                       <div className={`absolute -left-[41px] top-0 w-5 h-5 rounded-full border-4 transition ${hackerMode ? 'bg-black border-green-500' : 'bg-slate-950 border-purple-500'}`}></div>

@@ -36,7 +36,7 @@ const educationData = [
     school: "Universitas Utpadaka Swastika",
     degree: "Bachelor Degree - Information Technology",
     year: "09/2023 - Present",
-    desc: "Current GPA 3.94 (5th Semester). Night Class schedule. Active in AI & Cybersec research."
+    desc: "Current GPA 3.95 (6th Semester). Night Class schedule. Active in AI & Cybersec research."
   },
   {
     school: "SMA Strada St. Thomas Aquino",
@@ -50,7 +50,7 @@ const experienceData = [
   {
     company: "Google Indonesia",
     role: "Google Student Ambassador",
-    year: "09/2025 - Present",
+    year: "09/2025 - 02/2026",
     points: [
       "Achieved 'Rising Star' status (Top 200 of 800+ ambassadors).",
       "Spearheaded educational campaigns on Gemini AI, increasing AI literacy among students.",
@@ -80,6 +80,7 @@ const experienceData = [
 ];
 
 const certificatesData = [
+  // --- Data Lama ---
   { title: "Machine Learning Specialization", issuer: "Coursera", date: "08/2025", type: "Professional", id: "COURSERA-ML-SPEC", image: "/cert-ml-spec.png", credentialUrl: "https://www.coursera.org/account/accomplishments/specialization/986G5Y1Z5RDN" },
   { title: "Junior Mobile Programmer", issuer: "BNSP", date: "10/2024", type: "Professional", id: "BNSP-62019", image: "/cert-bnsp.png", credentialUrl: "https://drive.google.com/file/d/1kYhhUNzx_wkwIyMDl8KgXdMUtjvl-Z_l/view?usp=sharing" },
   { title: "Fundamental Deep Learning", issuer: "Dicoding", date: "01/2026", type: "Course", id: "4EXG304MDZRL", image: "/cert-deep-learning.png", credentialUrl: "https://www.dicoding.com/certificates/4EXG304MDZRL" },
@@ -97,9 +98,20 @@ const certificatesData = [
   { title: "Belajar Dasar AI", issuer: "Dicoding", date: "11/2024", type: "Course", id: "4EXG71K3EPRL", image: "/cert-dasar-ai.png", credentialUrl: "https://www.dicoding.com/certificates/4EXG71K3EPRL" },
   { title: "Visualisasi Data", issuer: "Dicoding", date: "11/2024", type: "Course", id: "07Z64J0JRPQR", image: "/cert-vis-data.png", credentialUrl: "https://www.dicoding.com/certificates/07Z64J0JRPQR" },
   { title: "Memulai Python", issuer: "Dicoding", date: "11/2024", type: "Course", id: "EYX4JQYLJZDL", image: "/cert-start-python.png", credentialUrl: "https://www.dicoding.com/certificates/GRX5J3W0YX0M" },
-  { title: "Financial Literacy", issuer: "Dicoding", date: "08/2025", type: "Course", id: "2VX351QQJPYQ", image: "/cert-fin-lit.png", credentialUrl: "https://www.dicoding.com/certificates/2VX351QQJPYQ" }
-];
+  { title: "Financial Literacy", issuer: "Dicoding", date: "08/2025", type: "Course", id: "2VX351QQJPYQ", image: "/cert-fin-lit.png", credentialUrl: "https://www.dicoding.com/certificates/2VX351QQJPYQ" },
 
+  // --- Data Baru ---
+  { title: "Networking Devices and Initial Configuration", issuer: "Cisco", date: "2026", type: "Course", id: "560c0ff0", image: "/cert-networking-devices.png", credentialUrl: "https://www.credly.com/badges/560c0ff0-a1e9-49a1-8e91-f81706d0f71c/public_url" },
+  { title: "Networking Basics", issuer: "Cisco", date: "2026", type: "Course", id: "4bcaadbc", image: "/cert-networking-basics.png", credentialUrl: "https://www.credly.com/badges/4bcaadbc-01be-4ffe-9a48-a6bbfccca60e/public_url" },
+  { title: "Introduction to Cybersecurity", issuer: "Cisco", date: "2026", type: "Course", id: "2e4b0419", image: "/cert-intro-cyber.png", credentialUrl: "https://www.credly.com/badges/2e4b0419-a304-46d3-8b62-f3747efd55d8" },
+  { title: "Machine Learning Terapan", issuer: "Dicoding", date: "2026", type: "Course", id: "72ZDJ0L1VZYW", image: "/cert-ml-terapan.png", credentialUrl: "https://www.dicoding.com/certificates/72ZDJ0L1VZYW" },
+  { title: "Membangun Sistem Machine Learning", issuer: "Dicoding", date: "2026", type: "Course", id: "2VX304MW3XYQ", image: "/cert-sistem-ml.png", credentialUrl: "https://dicoding.com/certificates/2VX304MW3XYQ" },
+  { title: "Belajar Fundamental Generative AI", issuer: "Dicoding", date: "2026", type: "Course", id: "MEPJO9VEWZ3V", image: "/cert-gen-ai.png", credentialUrl: "https://www.dicoding.com/certificates/MEPJO9VEWZ3V" },
+  { title: "Membangun Proyek Deep Learning Tingkat Mahir", issuer: "Dicoding", date: "2026", type: "Course", id: "GRX5WQ6LYZ0M", image: "/cert-dl-mahir.png", credentialUrl: "https://dicoding.com/certificates/GRX5WQ6LYZ0M" },
+  { title: "Google Gemini Certified Educator", issuer: "Google", date: "2026", type: "Professional", id: "GEMINI-EDUCATOR", image: "/cert-gemini-educator.png", credentialUrl: "https://drive.google.com/file/d/1DYRC0ZY0-EbzrQIJt2WWB446nOfDJ8cj/view?usp=sharing" },
+  { title: "Google Student Ambassador Graduation Certificate", issuer: "Google", date: "2026", type: "Professional", id: "GSA-GRADUATION", image: "/cert-gsa.png", credentialUrl: "https://drive.google.com/file/d/179UbXxhmRH4uH780C3ANj7cZWljR3EH2/view?usp=sharing" },
+  { title: "IDCamp 2025 Level Menengah", issuer: "Indosat Ooredoo Hutchison", date: "2025", type: "Course", id: "IDCAMP-2025-MENENGAH", image: "/cert-idcamp-2025.png", credentialUrl: "https://drive.google.com/file/d/1qjB6ZoAFXaL-X_cPO_S4OZdL2yD7u6CQ/view?usp=sharing" }
+];
 const skillsData = [
   { name: "Flutter / Dart", level: 85, icon: "💙" },
   { name: "Python (AI/ML)", level: 90, icon: "🐍" },
@@ -275,6 +287,36 @@ const portfolioData = [
     tech: ["Python", "Custom CNN", "SGD Momentum"],
     github: "https://github.com/nathAlv08/LungXRayAnalysisDeeplearningVer.2",
     type: "notebook"
+  },
+  {
+    id: 17,
+    title: "Vault Hub (ManGaHuaHwa-Anime Hub)",
+    category: "Cross-Platform App",
+    image: "https://images.unsplash.com/photo-1614544048536-0d28caf77f41?w=600&q=80",
+    desc: "Aplikasi personal media vault yang mengonsolidasi data bacaan/tontonan, melakukan query ke MyAnimeList REST API, dan menyinkronkan progres secara real-time antar perangkat.",
+    tech: ["Flutter", "REST API", "Cloud Sync"],
+    github: "https://github.com/nathAlv08/manGaHuaHwa-Anime-hub",
+    type: "mobile"
+  },
+  {
+    id: 18,
+    title: "Manga & Anime Recommendation System API",
+    category: "Machine Learning",
+    image: "https://images.unsplash.com/photo-1555949963-aa9fe0c9ce7b?w=600&q=80",
+    desc: "Mesin rekomendasi mandiri yang menggunakan FAISS vector indexing untuk memetakan preferensi konten pengguna ke dalam ruang vektor dan memberikan rekomendasi personal via REST API.",
+    tech: ["Python", "FAISS", "Machine Learning", "REST API", "Hugging Face"],
+    github: "https://github.com/nathAlv08/manga-recommendation-api", // Sesuaikan jika ada link repo spesifik
+    type: "notebook"
+  },
+  {
+    id: 19,
+    title: "Redteam OS (Corporate SOC Simulator)",
+    category: "Cybersecurity / AI",
+    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&q=80",
+    desc: "Simulasi pelatihan keamanan siber imersif yang menggunakan Google Gemini API sebagai 'game master' untuk menciptakan konsekuensi ancaman real-time berdasarkan taktik pertahanan pengguna.",
+    tech: ["React", "Google Gemini API", "Cybersecurity", "Interactive Simulation"],
+    liveUrl: "https://redteam-os.run.app",
+    type: "web"
   }
 ];
 

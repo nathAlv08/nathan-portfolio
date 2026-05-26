@@ -25,8 +25,8 @@ const profileData = {
     instagram: "https://www.instagram.com/nathanalvino03/"
   },
   stats: {
-    gpa: "3.94",
-    semester: "5th",
+    gpa: "3.95",
+    semester: "6th",
     projects: "16+"
   }
 };
